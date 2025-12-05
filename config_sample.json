@@ -1,0 +1,7 @@
+[
+    {"node": "FileNumber", "row": 4, "col": 3},
+    {"node": "FileType", "value": "Test report"},
+    {"node": "Version", "value": "2.1"},
+    {"node": "Date", "row": 3, "col": 5},
+    {"node": "Manager", "row": 4, "col": 3}
+]

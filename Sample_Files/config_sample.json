@@ -1,0 +1,74 @@
+{
+    "elements": [
+        {
+            "type": "single",
+            "node": "FileName",
+            "row": "1",
+            "col": "2",
+            "fixed": ""
+        },
+        {
+            "type": "single",
+            "node": "DataBig",
+            "row": "2",
+            "col": "2",
+            "fixed": ""
+        },
+        {
+            "type": "single",
+            "node": "Small",
+            "row": "3",
+            "col": "2",
+            "fixed": ""
+        },
+        {
+            "type": "single",
+            "node": "Good",
+            "row": "4",
+            "col": "2",
+            "fixed": ""
+        },
+        {
+            "type": "single",
+            "node": "Bad",
+            "row": "5",
+            "col": "2",
+            "fixed": ""
+        },
+        {
+            "type": "single",
+            "node": "Version",
+            "row": "",
+            "col": "",
+            "fixed": "0.1"
+        },
+        {
+            "type": "repeated",
+            "name": "Tablesimple",
+            "start": "8",
+            "end": "11",
+            "fields": [
+                {
+                    "node": "A",
+                    "col": "1",
+                    "offset": "0"
+                },
+                {
+                    "node": "B",
+                    "col": "2",
+                    "offset": "0"
+                },
+                {
+                    "node": "C",
+                    "col": "3",
+                    "offset": "0"
+                },
+                {
+                    "node": "D",
+                    "col": "4",
+                    "offset": "0"
+                }
+            ]
+        }
+    ]
+}

@@ -14,7 +14,7 @@
 
 ## Overview
 
-**Excel to XML Converter** is a desktop application that converts Excel spreadsheet data into structured XML files with digital signature capabilities. It's designed for creating Certificate of Analysis (CoA) documents and other XML-based reports.
+**Excel to XML Converter** is a desktop application that converts Excel spreadsheet data into structured XML files with digital signature capabilities. It's designed for creating XML-based reports.
 
 ### Key Features
 - ✅ Convert Excel data to XML format
@@ -123,42 +123,42 @@ This creates:
 
 **Use for**: Data that repeats across multiple rows (like a table)
 
-**Example**: Batch analysis data, test results, product listings
+**Example**: Bat analysis data, test results, product listings
 
 **How to add**:
 1. Click **"+ Repeated Block"** button
 2. Configure the block:
-   - **Block name**: Parent element name (e.g., "BatchAnalysis")
+   - **Block name**: Parent element name (e.g., "BatAnalysis")
    - **Rows - from**: Starting row number (e.g., "2")
    - **Rows - to**: Ending row number (leave blank for auto-detect)
 3. Click **"+ Add Field"** to add columns:
-   - **Field**: XML element name (e.g., "BatchNumber")
+   - **Field**: XML element name (e.g., "BatNumber")
    - **Col**: Column number (e.g., "1" for column A)
    - **Offset**: Row offset (usually "0", use "1" if data is one row below)
 
 **Example**:
 ```
-Block name: BatchAnalysis
+Block name: BatAnalysis
 Rows: 2 to (blank)
 
 Fields:
-  - Field: BatchNumber, Col: 1, Offset: 0
+  - Field: BatNumber, Col: 1, Offset: 0
   - Field: TestResult, Col: 2, Offset: 0
   - Field: Purity, Col: 3, Offset: 0
 ```
 
 This reads rows 2, 3, 4... until an empty row and creates:
 ```xml
-<BatchAnalysis>
-  <BatchNumber>B001</BatchNumber>
+<BatAnalysis>
+  <BatNumber>B001</BatNumber>
   <TestResult>Pass</TestResult>
   <Purity>99.5</Purity>
-</BatchAnalysis>
-<BatchAnalysis>
-  <BatchNumber>B002</BatchNumber>
+</BatAnalysis>
+<BatAnalysis>
+  <BatNumber>B002</BatNumber>
   <TestResult>Pass</TestResult>
   <Purity>99.8</Purity>
-</BatchAnalysis>
+</BatAnalysis>
 ```
 
 ---
@@ -172,7 +172,7 @@ This reads rows 2, 3, 4... until an empty row and creates:
 **How to add**:
 1. Click **"+ Nested Block"** button
 2. Configure:
-   - **Block name**: Parent element name (e.g., "FileSignature")
+   - **Block name**: Parent element name (e.g., "Signature")
 3. Click **"+ Add Sub-tag"** for each child element:
    - **Tag**: XML element name (e.g., "SignedBy")
    - **Fixed value**: Constant text OR leave empty to use cell
@@ -181,7 +181,7 @@ This reads rows 2, 3, 4... until an empty row and creates:
 
 **Example**:
 ```
-Block name: FileSignature
+Block name: Signature
 
 Sub-tags:
   - Tag: SignedBy, Fixed value: John Doe
@@ -191,11 +191,11 @@ Sub-tags:
 
 This creates:
 ```xml
-<FileSignature>
+<Signature>
   <SignedBy>John Doe</SignedBy>
   <Date>2024-12-07</Date>
   <Department>Quality Control</Department>
-</FileSignature>
+</Signature>
 ```
 
 ---
@@ -247,7 +247,7 @@ Cell "John" is at **Row: 2, Col: 2**
 Digital signatures:
 - ✅ Prove the XML hasn't been tampered with
 - ✅ Verify the document's authenticity
-- ✅ Meet compliance requirements for CoA documents
+- ✅ Meet compliance requirements for documents
 
 ---
 
@@ -443,7 +443,7 @@ Before processing large Excel files, test with a small sample to verify mappings
 If certain XML elements always have the same value (like company name), use "Fixed value" instead of row/col.
 
 ### 💡 Tip 3: Name Templates Descriptively
-Use names like "monthly_report_v1.json" or "batch_analysis_2024.json" for easy identification.
+Use names like "monthly_report_v1.json" or "bat_analysis_2024.json" for easy identification.
 
 ### 💡 Tip 4: Keep Excel Structure Consistent
 For templates to work across multiple files, keep the same row/column structure in all Excel files.
